@@ -1,5 +1,3 @@
- 
-// Insider src/lib.rs
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::log::sol_log_compute_units;
  

@@ -1,6 +1,3 @@
-// ----------- HELPER ----------
- 
-// Inside /src/helpers.rs
 use anchor_lang::{prelude::*, system_program};
  
 use crate::{error::RpgError, Player};

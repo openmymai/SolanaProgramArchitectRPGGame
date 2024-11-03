@@ -192,18 +192,14 @@ describe("RPG game", () => {
       const [gameAddress] = createGameAddress();
       const [playerAddress] = createPlayerAddress(gameAddress);
 
-      // To show that anyone can deposit the action points
-      // Ie, give this to a clockwork bot
       const clockworkWallet = anchor.web3.Keypair.generate();
 
-      // To give it a starting balance
       const clockworkProvider = new anchor.AnchorProvider(
         program.provider.connection,
         new NodeWallet(clockworkWallet),
         anchor.AnchorProvider.defaultOptions()
       );
 
-      // Have to give the accounts some lamports else the tx will fail
       const amountToInitialize = 10000000000;
 
       const clockworkAirdropTx =
